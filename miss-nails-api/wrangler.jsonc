@@ -5,14 +5,16 @@
   "main": "src/worker.js",
   "compatibility_date": "2026-10-06",
   "workers_dev": true,
+  "preview_urls": true,
 
-    "routes": [
+  "routes": [
     {
       "pattern": "api.missnails.app",
-      "custom_domain": true
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
     }
   ],
-
 
   "durable_objects": {
     "bindings": [
@@ -39,7 +41,7 @@
   },
 
   "observability": {
-    "enabled": true,
+    "enabled": false,
     "logs": {
       "enabled": true
     },
