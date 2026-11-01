@@ -18,7 +18,7 @@ import {Capacitor} from '@capacitor/core';
 import {Browser} from '@capacitor/browser';
 
 const WORKER_URL =
-  'https://miss-nails-api.ceballosgg2000.workers.dev';
+ 'https://api.missnails.app';
 
 
 /**
