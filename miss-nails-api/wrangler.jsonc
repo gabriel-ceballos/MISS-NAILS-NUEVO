@@ -38,7 +38,7 @@
 
   "vars": {
     "WORKER_ORIGIN": "https://api.missnails.app",
-    "APP_ORIGIN": "https://missnails.app",
+    "APP_ORIGIN": "https://miss-nails-nuevo.pages.dev",
     "APP_PATH": "/",
     "APP_ORIGINS": "https://missnails.app,https://www.missnails.app,https://miss-nails-nuevo.pages.dev,https://localhost,capacitor://localhost,http://localhost",
     "APPS_SCRIPT_URL": "https://script.google.com/macros/s/AKfycbzXAhVTNxhrvJNvWGumx3hAKG47soHEZ_PFIha2wgMZyLNknE90t0ttfm32cRKKV8TU/exec",
