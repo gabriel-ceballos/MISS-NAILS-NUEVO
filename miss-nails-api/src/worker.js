@@ -495,9 +495,26 @@ async function exchangeCode(env, provider, code, transaction) {
     json = {};
   }
 
-  if (!response.ok || !json.id_token) {
-    throw new Error('TOKEN_EXCHANGE_RECHAZADO');
-  }
+if (!response.ok || !json.id_token) {
+  console.error(
+    'GOOGLE_TOKEN_EXCHANGE_DIAGNOSTICO',
+    JSON.stringify({
+      provider,
+      status: response.status,
+      error: text(json.error),
+      errorDescription: text(json.error_description).slice(0, 300),
+      tieneClientId: !!text(clientId),
+      tieneClientSecret: !!text(clientSecret),
+      tieneCodeVerifier: !!text(transaction.codeVerifier),
+      longitudCodeVerifier: text(transaction.codeVerifier).length,
+      tieneRedirectUri: !!text(transaction.redirectUri),
+      redirectUri: text(transaction.redirectUri),
+      tieneIdToken: !!text(json.id_token)
+    })
+  );
+
+  throw new Error('TOKEN_EXCHANGE_RECHAZADO');
+}
 
   return json;
 }
